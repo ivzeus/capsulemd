@@ -1,0 +1,10 @@
+services:
+  capsulemd:
+    build: .
+    container_name: capsulemd
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./downloads:/downloads
+      - ./data:/app/server/data
+    restart: unless-stopped
